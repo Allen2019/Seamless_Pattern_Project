@@ -29,5 +29,25 @@ class DrawViewController: UIViewController {
         drawView.setNeedsDisplay()
     }
     
+    //source of this func: stackoverflow.com/questions/4334233/how-to-capture-uiview-to-uiimage-without-loss-of-quality-on-retina-display
+    
+    func viewToImage(with view: UIView) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.isOpaque, 0.0)
+        defer { UIGraphicsEndImageContext() }
+        if let context = UIGraphicsGetCurrentContext() {
+            view.layer.render(in: context)
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            return image
+        }
+        return nil
+    }
+    
+    @IBAction func exportButton(_ sender: Any) {
+        guard let image = viewToImage(with: drawView) else {
+            return
+        }
+        let activity = UIActivityViewController(activityItems: [image],
+                                                applicationActivities: nil)
+        present(activity, animated: true)
+    }
 }
-

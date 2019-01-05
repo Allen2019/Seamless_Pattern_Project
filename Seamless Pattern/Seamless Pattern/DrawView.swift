@@ -123,6 +123,7 @@ class DrawView: UIView, drawViewProtocol {
             lastPoint = touch.location(in: self)
         }
         self.setNeedsDisplay()
+        
     }
     
     override func draw(_ rect: CGRect) {
@@ -133,9 +134,9 @@ class DrawView: UIView, drawViewProtocol {
         for line in lines {
             
             context?.move(to: CGPoint(x: line.start.x, y: line.start.y))
-            //    print("line.start.x: \(line.start.x), line.start.y: \(line.start.y)")
+                print("line.start.x: \(line.start.x), line.start.y: \(line.start.y)")
             context?.addLine(to: CGPoint(x: line.end.x, y: line.end.y))
-            //    print("line.end.x: \(line.end.x), line.end.y: \(line.end.y)")
+                print("line.end.x: \(line.end.x), line.end.y: \(line.end.y)")
             
         }
         
