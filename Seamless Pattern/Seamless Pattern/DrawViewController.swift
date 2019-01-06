@@ -16,12 +16,16 @@ class DrawViewController: UIViewController {
     
     var d: CGFloat = 0
     
+    var delegate: drawViewProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         dVC = self // setting the global dVC variable to itself, so that other objects can access it
         d = drawView.frame.width
+        
+        delegate = drawView 
     }
 
     @IBAction func clearButton(_ sender: Any) {
