@@ -16,19 +16,19 @@ class SettingViewController: UIViewController {
     }
 
     @IBAction func purpleButton(_ sender: Any) {
-        dVC.delegate?.color = UIColor(red: 154, green: 120, blue: 169, alpha: 1.0).cgColor
+        dVC.delegate?.color = UIColor(red: 154/255.0, green: 120/255.0, blue: 169/255.0, alpha: 1.0).cgColor
     }
     @IBAction func blueButton(_ sender: Any) {
-        dVC.delegate?.color = UIColor(red: 122, green: 194, blue: 195, alpha: 1.0).cgColor
+        dVC.delegate?.color = UIColor(red: 122/255.0, green: 194/255.0, blue: 195/255.0, alpha: 1.0).cgColor
     }
     @IBAction func greenButton(_ sender: Any) {
-        dVC.delegate?.color = UIColor(red: 181, green: 194, blue: 59, alpha: 1.0).cgColor
+        dVC.delegate?.color = UIColor(red: 181/255.0, green: 194/255.0, blue: 59/255.0, alpha: 1.0).cgColor
     }
     @IBAction func yellowButton(_ sender: Any) {
-        dVC.delegate?.color = UIColor(red: 238, green: 201, blue: 65, alpha: 1.0).cgColor
+        dVC.delegate?.color = UIColor(red: 238/255.0, green: 201/255.0, blue: 65/255.0, alpha: 1.0).cgColor
     }
     @IBAction func redButton(_ sender: Any) {
-        dVC.delegate?.color = UIColor(red: 231, green: 107, blue: 102, alpha: 1.0).cgColor
+        dVC.delegate?.color = UIColor(red: 231/255.0, green: 107/255.0, blue: 102/255.0, alpha: 1.0).cgColor
     }
     
 }
