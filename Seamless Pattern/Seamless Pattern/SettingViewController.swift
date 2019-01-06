@@ -33,10 +33,14 @@ class SettingViewController: UIViewController {
     }
     
     //MARK: Brush Width
+    func homeMadeTruncate(_ float: Float) -> Double{
+        return Double(Int(float*100))/100
+    }
+    
     @IBOutlet weak var widthLabel: UILabel!
     @IBAction func widthSlider(_ sender: UISlider) {
-        dVC.delegate?.lineWidth = CGFloat(sender.value)
-        widthLabel.text = "\(sender.value)"
+        dVC.delegate?.lineWidth = CGFloat(homeMadeTruncate(sender.value))
+        widthLabel.text = "\(homeMadeTruncate(sender.value))"
     }
 }
 

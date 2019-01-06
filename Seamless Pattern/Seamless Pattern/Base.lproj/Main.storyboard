@@ -147,8 +147,8 @@
                                     <action selector="widthSlider:" destination="8rJ-Kc-sve" eventType="valueChanged" id="VB0-sw-eIL"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SO-hh-IGG">
-                                <rect key="frame" x="175" y="298" width="24" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SO-hh-IGG">
+                                <rect key="frame" x="161" y="298" width="52" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -163,7 +163,7 @@
                             <constraint firstItem="Dka-UI-6Qu" firstAttribute="top" secondItem="OFo-es-AUI" secondAttribute="bottom" constant="22" id="IJy-vr-hM6"/>
                             <constraint firstItem="Bfu-h2-Q3d" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="34" id="KRf-6w-Ujt"/>
                             <constraint firstItem="OFo-es-AUI" firstAttribute="centerX" secondItem="Dka-UI-6Qu" secondAttribute="centerX" id="V8q-zy-5Cu"/>
-                            <constraint firstItem="5SO-hh-IGG" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="175" id="VyK-il-AQ4"/>
+                            <constraint firstItem="5SO-hh-IGG" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="161" id="VyK-il-AQ4"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="Dka-UI-6Qu" secondAttribute="bottom" constant="335" id="YlV-oB-8K6"/>
                             <constraint firstItem="5SO-hh-IGG" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="bff-ob-IBb"/>
                             <constraint firstItem="Dka-UI-6Qu" firstAttribute="centerX" secondItem="Bfu-h2-Q3d" secondAttribute="centerX" id="loD-js-KZu"/>
