@@ -25,7 +25,7 @@ class DrawViewController: UIViewController {
         dVC = self // setting the global dVC variable to itself, so that other objects can access it
         d = drawView.frame.width
         
-        delegate = drawView 
+        delegate = drawView //set drawView as its delegate, so that other objects can access drawView through DrawViewController
     }
 
     @IBAction func clearButton(_ sender: Any) {

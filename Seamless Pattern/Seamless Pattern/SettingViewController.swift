@@ -15,6 +15,7 @@ class SettingViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    //MARK: Colors
     @IBAction func purpleButton(_ sender: Any) {
         dVC.delegate?.color = UIColor(red: 154/255.0, green: 120/255.0, blue: 169/255.0, alpha: 1.0).cgColor
     }
