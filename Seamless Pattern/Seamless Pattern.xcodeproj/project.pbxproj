@@ -16,6 +16,8 @@
 		6C55017A21E0D49F004CEFCE /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C55017921E0D49F004CEFCE /* Line.swift */; };
 		6C55017E21E0D62B004CEFCE /* DrawModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C55017D21E0D62B004CEFCE /* DrawModel.swift */; };
 		6C55018021E0D67B004CEFCE /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C55017F21E0D67B004CEFCE /* DrawView.swift */; };
+		6C5B752121E1DF72004215B6 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B752021E1DF72004215B6 /* PreviewViewController.swift */; };
+		6C5B752321E1E198004215B6 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B752221E1E198004215B6 /* Functions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		6C55017921E0D49F004CEFCE /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		6C55017D21E0D62B004CEFCE /* DrawModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawModel.swift; sourceTree = "<group>"; };
 		6C55017F21E0D67B004CEFCE /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		6C5B752021E1DF72004215B6 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		6C5B752221E1E198004215B6 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,15 +67,17 @@
 			isa = PBXGroup;
 			children = (
 				6C55016521E0D009004CEFCE /* AppDelegate.swift */,
-				6C55016721E0D009004CEFCE /* DrawViewController.swift */,
 				6C55017921E0D49F004CEFCE /* Line.swift */,
+				6C55016721E0D009004CEFCE /* DrawViewController.swift */,
 				6C55016921E0D009004CEFCE /* SettingViewController.swift */,
+				6C5B752021E1DF72004215B6 /* PreviewViewController.swift */,
 				6C55016B21E0D009004CEFCE /* Main.storyboard */,
 				6C55016E21E0D00A004CEFCE /* Assets.xcassets */,
 				6C55017021E0D00A004CEFCE /* LaunchScreen.storyboard */,
 				6C55017321E0D00A004CEFCE /* Info.plist */,
 				6C55017F21E0D67B004CEFCE /* DrawView.swift */,
 				6C55017D21E0D62B004CEFCE /* DrawModel.swift */,
+				6C5B752221E1E198004215B6 /* Functions.swift */,
 			);
 			path = "Seamless Pattern";
 			sourceTree = "<group>";
@@ -149,6 +155,8 @@
 			files = (
 				6C55016A21E0D009004CEFCE /* SettingViewController.swift in Sources */,
 				6C55017A21E0D49F004CEFCE /* Line.swift in Sources */,
+				6C5B752121E1DF72004215B6 /* PreviewViewController.swift in Sources */,
+				6C5B752321E1E198004215B6 /* Functions.swift in Sources */,
 				6C55018021E0D67B004CEFCE /* DrawView.swift in Sources */,
 				6C55016621E0D009004CEFCE /* AppDelegate.swift in Sources */,
 				6C55016821E0D009004CEFCE /* DrawViewController.swift in Sources */,

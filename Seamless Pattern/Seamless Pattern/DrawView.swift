@@ -18,6 +18,7 @@ class DrawView: UIView, drawViewProtocol {
     var color: CGColor = UIColor.black.cgColor
     var lineWidth: CGFloat = 5.0
     var opacity: CGFloat = 1.0
+    var lineCap = CGLineCap.square
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
@@ -38,6 +39,7 @@ class DrawView: UIView, drawViewProtocol {
         {
             lines.append(Line(start: lastPoint, end: newPoint))
             lastPoint = newPoint
+            lineCap = CGLineCap.round
         }
         else if newPoint.x < 0 && newPoint.y < 0 //top left corner
         {
@@ -140,7 +142,7 @@ class DrawView: UIView, drawViewProtocol {
             
         }
         
-        context?.setLineCap(CGLineCap.round)
+        context?.setLineCap(lineCap)
         context?.setStrokeColor(color)
         context?.setLineWidth(lineWidth)
         context?.setAlpha(opacity)
