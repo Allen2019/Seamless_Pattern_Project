@@ -32,5 +32,11 @@ class SettingViewController: UIViewController {
         dVC.delegate?.color = UIColor(red: 231/255.0, green: 107/255.0, blue: 102/255.0, alpha: 1.0).cgColor
     }
     
+    //MARK: Brush Width
+    @IBOutlet weak var widthLabel: UILabel!
+    @IBAction func widthSlider(_ sender: UISlider) {
+        dVC.delegate?.lineWidth = CGFloat(sender.value)
+        widthLabel.text = "\(sender.value)"
+    }
 }
 

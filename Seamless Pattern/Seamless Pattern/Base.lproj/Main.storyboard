@@ -141,27 +141,43 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Dka-UI-6Qu">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dka-UI-6Qu">
                                 <rect key="frame" x="52" y="253" width="271" height="31"/>
+                                <connections>
+                                    <action selector="widthSlider:" destination="8rJ-Kc-sve" eventType="valueChanged" id="VB0-sw-eIL"/>
+                                </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SO-hh-IGG">
+                                <rect key="frame" x="175" y="298" width="24" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="5SO-hh-IGG" secondAttribute="bottom" constant="299" id="7NP-Td-nSy"/>
                             <constraint firstItem="Bfu-h2-Q3d" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="7TT-Ea-xfd"/>
                             <constraint firstItem="Bfu-h2-Q3d" firstAttribute="top" secondItem="qaW-Az-epl" secondAttribute="bottom" constant="8" id="9U2-vl-oeV"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="Bfu-h2-Q3d" secondAttribute="bottom" constant="452" id="DTo-Uw-qcX"/>
                             <constraint firstItem="Dka-UI-6Qu" firstAttribute="top" secondItem="OFo-es-AUI" secondAttribute="bottom" constant="22" id="IJy-vr-hM6"/>
                             <constraint firstItem="Bfu-h2-Q3d" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="34" id="KRf-6w-Ujt"/>
                             <constraint firstItem="OFo-es-AUI" firstAttribute="centerX" secondItem="Dka-UI-6Qu" secondAttribute="centerX" id="V8q-zy-5Cu"/>
+                            <constraint firstItem="5SO-hh-IGG" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="175" id="VyK-il-AQ4"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="Dka-UI-6Qu" secondAttribute="bottom" constant="335" id="YlV-oB-8K6"/>
+                            <constraint firstItem="5SO-hh-IGG" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="bff-ob-IBb"/>
                             <constraint firstItem="Dka-UI-6Qu" firstAttribute="centerX" secondItem="Bfu-h2-Q3d" secondAttribute="centerX" id="loD-js-KZu"/>
                             <constraint firstItem="qaW-Az-epl" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="pe6-rL-Rdb"/>
+                            <constraint firstItem="5SO-hh-IGG" firstAttribute="top" secondItem="Dka-UI-6Qu" secondAttribute="bottom" constant="15" id="tI0-WB-5aF"/>
                             <constraint firstItem="Bfu-h2-Q3d" firstAttribute="top" secondItem="qaW-Az-epl" secondAttribute="bottom" constant="8" id="uYn-0C-6rW"/>
                             <constraint firstItem="Dka-UI-6Qu" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="54" id="wlH-VR-tQC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="widthLabel" destination="5SO-hh-IGG" id="OFo-9J-MJN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
