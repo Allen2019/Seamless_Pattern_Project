@@ -8,17 +8,35 @@
 
 import UIKit
 
-class DrawView: UIView, drawViewProtocol {
+class DrawView: UIView {
     
-    var lines: [Line] = []
+    private var lines: [Line] = []
     
-    var lastPoint: CGPoint!
+    private var lastPoint: CGPoint!
     
     
-    var color: CGColor = UIColor.black.cgColor
-    var lineWidth: CGFloat = 5.0
-    var opacity: CGFloat = 1.0
-    var lineCap = CGLineCap.square
+    private var color: CGColor = UIColor.black.cgColor
+    private var lineWidth: CGFloat = 5.0
+    private var opacity: CGFloat = 1.0
+    private var lineCap = CGLineCap.square
+    
+    //MARK:Setters
+    
+    func appendLines(_ line: Line)
+    {
+        lines.append(line)
+    }
+    func clearLines()
+    {
+        lines = []
+    }
+    func setColor(_ color: CGColor){
+        self.color = color
+    }
+    func setLineWidth(_ width: CGFloat){
+        lineWidth = width
+    }
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
