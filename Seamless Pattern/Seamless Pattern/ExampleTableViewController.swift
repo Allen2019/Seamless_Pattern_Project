@@ -38,7 +38,7 @@ class ExampleTableViewController: UITableViewController {
     }
     
     //START HERE
-    /*
+    
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      let cell = tableView.dequeueReusableCell(withIdentifier: "lineExample(prototypeCell)", for: indexPath)
      
@@ -48,7 +48,7 @@ class ExampleTableViewController: UITableViewController {
      
      return cell
      }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,8 +91,10 @@ class ExampleTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-//        guard let destination = segue.destination as? ExampleTableViewController else { return }
-//        guard let indexPath = self.tableView.indexPathForSelectedRow else { return }
+        guard let destination = segue.destination as? ExampleViewController else { return }
+        guard let indexPath = self.tableView.indexPathForSelectedRow else { return }
+        
+        destination.exampleLines = lineExamples[indexPath.row].contents //sends the lineExample object's contents from the lineExamples array fetched from the internet.
         
         
         // Get the new view controller using segue.destination.
@@ -100,14 +102,14 @@ class ExampleTableViewController: UITableViewController {
     }
     
     func fetch() {
-        guard let url = URL(string: ConfigurationURL) else { return }
+        guard let url = URL(string: ExampleURL) else { return }
         fetcher.fetch(url: url) { (response) in
             let op = BlockOperation {
                 switch response {
                 case .success(let data):
                     do {
                         self.lineExamples = try JSONDecoder().decode([LineExample].self, from: data)
-                        self.tableView.reloadData() //lec 10 (01:53:ØØ)
+                        self.tableView.reloadData()
                         
                     } catch {
                         print(error.localizedDescription)

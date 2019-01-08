@@ -10,10 +10,23 @@ import UIKit
 
 class ExampleViewController: UIViewController {
 
+    @IBOutlet weak var exampleView: DrawView!
+    var exampleLines: [[Int]]!
+    var lines: [Line] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        for array in exampleLines
+        {
+            lines.append(Line.init(start: CGPoint(x:array[0],y:array[1]), end: CGPoint(x:array[2],y:array[3])))
+        }
+        
+        exampleView.setLines(lines)
+        exampleView.setNeedsDisplay()
+        
     }
     
 

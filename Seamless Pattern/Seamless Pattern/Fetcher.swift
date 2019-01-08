@@ -8,7 +8,8 @@
 
 import Foundation
 
-let ConfigurationURL = "https://www.dropbox.com/s/2fmdf7joqnmqnq5/networkTrial.json?dl=1"
+let ExampleURL = "https://www.dropbox.com/s/myzwrkvau253nth/networkTrial2.json?dl=1"
+
 
 //From summer course taught by Van Simmons
 

@@ -26,6 +26,10 @@ class DrawView: UIView {
     {
         lines.append(line)
     }
+    func setLines(_ lines: [Line])
+    {
+        self.lines = lines
+    }
     func clearLines()
     {
         lines = []
