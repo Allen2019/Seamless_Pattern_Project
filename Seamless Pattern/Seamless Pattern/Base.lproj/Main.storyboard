@@ -14,9 +14,25 @@
             <objects>
                 <viewController id="Wul-oW-SSb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LuL-tb-07W">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="458"/>
+                        <rect key="frame" x="0.0" y="0.0" width="291" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNr-lt-OeM" customClass="DrawView" customModule="Seamless_Pattern" customModuleProvider="target">
+                                <rect key="frame" x="12" y="67" width="266" height="266"/>
+                                <color key="backgroundColor" red="0.95464843749999995" green="0.95464843749999995" blue="0.95464843749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="266" id="oYu-yO-kfY"/>
+                                    <constraint firstAttribute="width" constant="266" id="yTx-aT-O2U"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FNr-lt-OeM" firstAttribute="top" secondItem="cdo-ck-KUD" secondAttribute="top" constant="67" id="Bpk-yR-NcZ"/>
+                            <constraint firstItem="cdo-ck-KUD" firstAttribute="trailing" secondItem="FNr-lt-OeM" secondAttribute="trailing" constant="13" id="HAw-0D-vXu"/>
+                            <constraint firstItem="FNr-lt-OeM" firstAttribute="leading" secondItem="cdo-ck-KUD" secondAttribute="leading" constant="12" id="O4M-fw-k9N"/>
+                            <constraint firstItem="cdo-ck-KUD" firstAttribute="bottom" secondItem="FNr-lt-OeM" secondAttribute="bottom" constant="67" id="aH0-8m-eTG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cdo-ck-KUD"/>
                     </view>
                 </viewController>
@@ -29,15 +45,15 @@
             <objects>
                 <tableViewController id="mq9-78-grw" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aVX-rJ-UYH">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="458"/>
+                        <rect key="frame" x="0.0" y="0.0" width="291" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rcO-AA-UCO">
-                                <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lineExample(prototypeCell)" id="rcO-AA-UCO">
+                                <rect key="frame" x="0.0" y="28" width="291" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rcO-AA-UCO" id="DrW-5r-uVd">
-                                    <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="291" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -68,7 +84,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dVe-IS-GS4">
-                                        <rect key="frame" x="25" y="8" width="240" height="458"/>
+                                        <rect key="frame" x="0.0" y="37" width="291" height="400"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <connections>
                                             <segue destination="mq9-78-grw" kind="embed" id="67O-01-X45"/>

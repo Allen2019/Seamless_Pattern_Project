@@ -9,8 +9,13 @@
 import UIKit
 
 class ExampleTableViewController: UITableViewController {
+    
+    var fetcher = Fetcher()
+    var lineExamples: [LineExample]!
+    var indexPath: IndexPath?
 
     override func viewDidLoad() {
+        fetch()
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -24,22 +29,25 @@ class ExampleTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return (lineExamples ?? []).count
     }
-
+    
+    //START HERE
     /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
+     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     let cell = tableView.dequeueReusableCell(withIdentifier: "lineExample(prototypeCell)", for: indexPath)
+     
+     
+     cell.textLabel?.text = lineExamples[indexPath.row].title ?? "Bleh" 
+     // Configure the cell...
+     
+     return cell
+     }
     */
 
     /*
@@ -77,14 +85,42 @@ class ExampleTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+//        guard let destination = segue.destination as? ExampleTableViewController else { return }
+//        guard let indexPath = self.tableView.indexPathForSelectedRow else { return }
+        
+        
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
-
+    
+    func fetch() {
+        guard let url = URL(string: ConfigurationURL) else { return }
+        fetcher.fetch(url: url) { (response) in
+            let op = BlockOperation {
+                switch response {
+                case .success(let data):
+                    do {
+                        self.lineExamples = try JSONDecoder().decode([LineExample].self, from: data)
+                        self.tableView.reloadData() //lec 10 (01:53:ØØ)
+                        
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                    
+                case .failure(let msg):
+                    //()//this is how you do a null statement
+                    print("\(msg)") //but then Prof. Simons decided to do that
+                }
+            }
+            OperationQueue.main.addOperation(op)
+        }
+    }
+    //^Fetcher Method^//
+    
 }
